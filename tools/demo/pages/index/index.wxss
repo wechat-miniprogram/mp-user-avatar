@@ -1,0 +1,16 @@
+.mp-user-avatar-box .avatar-style {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.nickname-style {
+  color: #333;
+  font-size: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 20rpx;
+}
+
+.virtual-info {
+  margin-left: 20rpx;
+}

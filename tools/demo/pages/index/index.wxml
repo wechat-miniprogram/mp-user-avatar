@@ -1,0 +1,8 @@
+<view class="mp-user-avatar-box">
+  <mp-user-avatar
+    avatar-class="avatar-style"
+    nickname-class="nickname-style"
+  >
+    <view class="virtual-info">附加信息</view>
+  </mp-user-avatar>
+</view>

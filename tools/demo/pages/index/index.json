@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "mp-user-avatar": "../../components/mp-user-avatar/index"
+    }
+}

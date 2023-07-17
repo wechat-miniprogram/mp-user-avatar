@@ -1,0 +1,36 @@
+<view
+  class="user-info"
+  style="flex-direction: {{direction}}"
+>
+  <!-- 头像 -->
+  <button
+    wx:if="{{display === displayType.AVATAR || display === displayType.NICKNAME_AND_AVATAR}}"
+    class="avatar-wrapper"
+    open-type="chooseAvatar"
+    bind:chooseavatar="onChooseAvatar"
+    disabled="{{!editable}}"
+  >
+    <image
+      class="avatar avatar-class"
+      src="{{(dataSource === dataSourceType.PROPS ? avatar : userInfo.avatar) || defaultAvatar}}"
+    >
+    </image>
+  </button>
+
+  <view
+    wx:if="{{display === displayType.NICKNAME || display === displayType.NICKNAME_AND_AVATAR}}"
+    class="{{direction === directionType.ROW ? '' : 'user-name-column'}}"
+  >
+    <!-- 昵称 -->
+    <input
+      type="nickname"
+      class="nickname-class"
+      value="{{(dataSource === dataSourceType.PROPS ? nickname : userInfo.nickname) || defaultNickname}}"
+      bindblur="onNicknameChanged"
+      bindnicknamereview="onNicknameChangedAfterReview"
+      disabled="{{!editable}}"
+    />
+    <!-- 可添加的额外内容 -->
+    <slot wx:if="{{display === displayType.NICKNAME_AND_AVATAR}}"></slot>
+  </view>
+</view>
