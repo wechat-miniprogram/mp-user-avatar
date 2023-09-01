@@ -47,6 +47,7 @@ module.exports = {
         unnecessary: true
       }
     ],
+    semi: 'error',
   },
   globals: {
     App: true,
@@ -54,5 +55,5 @@ module.exports = {
     Component: true,
     Behavior: true,
     wx: true,
-  }
-}
+  },
+};

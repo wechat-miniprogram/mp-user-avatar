@@ -15,7 +15,7 @@ const tsProject = gulpTs.createProject('./tsconfig.json');
 /* config */
 const isDev = process.argv.indexOf('--develop') >= 0;
 const src = 'src';
-const demoSrc = 'tools/demo'
+const demoSrc = 'tools/demo';
 const typings = 'typings';
 const demoDist = 'miniprogram_dev';
 const dist = isDev ? `${demoDist}/components/mp-user-avatar` : 'miniprogram_dist';
