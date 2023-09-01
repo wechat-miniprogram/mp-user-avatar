@@ -1,28 +1,28 @@
 module.exports = {
-  'extends': [
+  extends: [
     'plugin:promise/recommended'
   ],
-  'parserOptions': {
-    'ecmaVersion': 9,
-    'sourceType': 'module'
+  parserOptions: {
+    ecmaVersion: 9,
+    sourceType: 'module'
   },
-  'env': {
-    'es6': true,
-    'node': true,
-    'jest': true
+  env: {
+    es6: true,
+    node: true,
+    jest: true
   },
-  'plugins': [
+  plugins: [
     'import',
     'node',
     'promise'
   ],
-  'parser': '@typescript-eslint/parser',
-  'rules': {
+  parser: '@typescript-eslint/parser',
+  rules: {
     'comma-dangle': [
       'error',
       'only-multiline'
     ],
-    'complexity': ['error', 10],
+    complexity: ['error', 10],
     'func-names': 'off',
     'handle-callback-err': [
       'error',
@@ -34,7 +34,7 @@ module.exports = {
       'error',
       'after',
       {
-        'overrides': {
+        overrides: {
           ':': 'before',
           '?': 'before'
         }
@@ -44,17 +44,15 @@ module.exports = {
       1,
       'as-needed',
       {
-        'unnecessary': true
+        unnecessary: true
       }
     ],
   },
-  'globals': {
-    'window': true,
-    'document': true,
-    'App': true,
-    'Page': true,
-    'Component': true,
-    'Behavior': true,
-    'wx': true,
+  globals: {
+    App: true,
+    Page: true,
+    Component: true,
+    Behavior: true,
+    wx: true,
   }
 }
